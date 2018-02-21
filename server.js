@@ -15,7 +15,7 @@ const port = process.env.PORT || 8080;
 
 // routes
 app.get('/', function(req, res) {
-		res.send(Mustache.render(layout, req));
+	res.send(Mustache.render(layout, req));
 });
 
 app.listen(port, () => console.log('Example app listening on port %s!', port));
