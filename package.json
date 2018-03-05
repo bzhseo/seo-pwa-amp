@@ -1,22 +1,17 @@
 {
-	"name": "seo-pwa-amp",
-	"version": "1.0.0",
-	"description": "SEO Friendly PWA serving AMP",
-	"main": "server.js",
-	"scripts": {
-		"test": "",
-		"start": "node server.js"
-	},
-	"author":
-		"Francois Mouton <francois.mouton@gmail.com>",
-	"license": "MIT",
-	"dependencies": {
-		"express": "^4.16.2",
-		"lru-cache": "^4.1.1",
-		"mustache": "^2.3.0",
-		"rss-parser": "^3.1.1"
-	},
-	"engines": {
-		"node": "8"
-	}
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodejs ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "static-favicon": "~1.0.0",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "jade": "~1.3.0"
+  }
 }
