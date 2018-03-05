@@ -1,16 +1,20 @@
+var debug = require('debug')('my-application');
 var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-app.listen(8080);
+app.set('port', process.env.PORT || 8080);
+
+var server = app.listen(app.get('port'), function() {
+    debug('Express server listening on port ' + server.address().port);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -56,6 +60,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
